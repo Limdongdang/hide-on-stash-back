@@ -1,8 +1,9 @@
 import * as Minio from 'minio';
+import dotenv from 'dotenv';
 
 const minioClient = new Minio.Client({
-  endPoint: 'minio',
-  port: 9000,
+  endPoint: process.env.MINIO_HOST,
+  port: process.env.MINIO_PORT,
   useSSL: false,
   accessKey: process.env.MINIO_ROOT_USER,
   secretKey: process.env.MINIO_ROOT_PASSWORD

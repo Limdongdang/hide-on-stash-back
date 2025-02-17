@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const minioClient = new Minio.Client({
-  endPoint: process.env.MINIO_HOST,
+  endPoint: process.env.MINIO_END_POINT,
   port: process.env.MINIO_PORT,
   useSSL: false,
   accessKey: process.env.MINIO_ROOT_USER,

@@ -2,6 +2,8 @@
 import { User } from "../model/user.model.js";
 import { sequelize } from "../model/index.js";
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const setCookie = (res, name, token, options = {}) => {
     res.cookie(name, token, {

@@ -1,5 +1,6 @@
 import * as Minio from 'minio';
 import dotenv from 'dotenv';
+dotenv.config();
 
 const minioClient = new Minio.Client({
   endPoint: process.env.MINIO_HOST,

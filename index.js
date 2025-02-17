@@ -24,8 +24,8 @@ app.use(cookieParser());
 
 // swagger UI 설정
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-app.use('/file', fileRoutes);
-app.use('/user', userRoutes);
+app.use('/api/file', fileRoutes);
+app.use('/api/user', userRoutes);
 
 // MySQL 연결
 await sequelize.sync({ force: false })

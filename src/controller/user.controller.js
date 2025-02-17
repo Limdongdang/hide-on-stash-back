@@ -1,4 +1,6 @@
 import userService from "../service/user.service.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const loginUser = async (req, res) => {
     try {

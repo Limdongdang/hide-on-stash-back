@@ -2,8 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const allowedOrigins = [
-    'http://localhost',
-    'http://hideonstash.site'
+    'https://hideonstash.site'
 ];
 
 const corsOptions = {

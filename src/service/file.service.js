@@ -43,6 +43,11 @@ const removeFile = async (data) => {
         await transaction.rollback();
         throw error;
     }
+
+}
+
+const changeExternalUrl = (url) => {
+    return url.replace('http://192.168.219.103:9000', 'http://hideonstash.site/file');
 }
 
 const getPresignedUrl = async (name) => {
@@ -52,7 +57,7 @@ const getPresignedUrl = async (name) => {
                 reject(err);
             } else {
                 console.log(url);
-                const externalUrl = url.replace('http://minio:9000', 'http://localhost:9000');
+                const externalUrl = changeExternalUrl(url);
                 resolve(externalUrl);
             }
         })
@@ -65,7 +70,7 @@ const getPresignedUrlGetObject = async (name) => {
             if (err) {
                 reject(err);
             } else {
-                const externalUrl = url.replace('http://minio:9000', 'http://localhost:9000');
+                const externalUrl = changeExternalUrl(url);
                 resolve(externalUrl);
             }
         })

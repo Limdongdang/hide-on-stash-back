@@ -47,7 +47,7 @@ const removeFile = async (data) => {
 }
 
 const changeExternalUrl = (url) => {
-    return url.replace('http://192.168.219.103:9000', 'http://hideonstash.site/file');
+    return url.replace('http://192.168.219.103:9000', 'https://hideonstash.site/file');
 }
 
 const getPresignedUrl = async (name) => {
